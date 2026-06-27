@@ -15,3 +15,4 @@ Update this file in the same commit as the change. One entry per release, groupe
 - Phase 1 implementation plan at `docs/superpowers/plans/2026-06-27-phase1-core-loop.md` (14 tasks, TDD where the math allows).
 - `project.yml` + XcodeGen-generated `DroneDelivery.xcodeproj` (iOS 18, Swift 6 strict concurrency).
 - Placeholder `DroneDeliveryApp.swift` and `BootstrapTests.swift`.
+- Domain model types: Mission, Conditions, Waypoint, WeatherSpec, AirspaceZone (with polygon containment), NOTAM, GamePhase.
