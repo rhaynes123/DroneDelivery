@@ -14,6 +14,7 @@
 		1CCD982DDCC7D54AF0682445 /* MissionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36DAD2BD924E72879E6D0C /* MissionStoreTests.swift */; };
 		30F020764F13DA04FFB75980 /* BootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1E995950D909D15C6702 /* BootstrapTests.swift */; };
 		385ECE104933515F26B29C49 /* AirspaceTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */; };
+		4E92F7003230843DB5CF2162 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E444DFB0A62402C62CFEED /* AppState.swift */; };
 		5E11149A88C48E29BDE4231B /* SaveDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59DF6CFC185197921A12BE /* SaveDataTests.swift */; };
 		6F1C1B3ED7BAE8FDC2A34199 /* KinematicSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C3284313FBA2BB6F5A383 /* KinematicSystem.swift */; };
 		85494EFFB275DE5E57944CFC /* Missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C0B36C726C6AEFAF7418D41 /* Missions.json */; };
@@ -41,6 +42,7 @@
 		1B9F7173FBF4A36DC8456E47 /* Airspace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Airspace.json; sourceTree = "<group>"; };
 		1F30F0C4E3B9C099D171C248 /* DroneDeliveryTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DroneDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EBAD1A1302D8F7B5289C7C /* KinematicMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinematicMathTests.swift; sourceTree = "<group>"; };
+		49E444DFB0A62402C62CFEED /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		5206C65DAF946400EBE00084 /* MissionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStore.swift; sourceTree = "<group>"; };
 		5C0B36C726C6AEFAF7418D41 /* Missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Missions.json; sourceTree = "<group>"; };
 		5D36DAD2BD924E72879E6D0C /* MissionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStoreTests.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		A41FCED7CF1B653ACE769AFF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				49E444DFB0A62402C62CFEED /* AppState.swift */,
 				11AC885B6C2ADF98F7DDC938 /* DroneDeliveryApp.swift */,
 				ACA4B601C9FA25A24B649777 /* GamePhase.swift */,
 			);
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9DB80E5C4964BF6F4829688 /* AirspaceTypes.swift in Sources */,
+				4E92F7003230843DB5CF2162 /* AppState.swift in Sources */,
 				8AEBB8891E7E019097840815 /* DroneComponents.swift in Sources */,
 				94419FE4CB73627E17B2EF2F /* DroneDeliveryApp.swift in Sources */,
 				DB11AE2D720829DA1AADB0A5 /* GamePhase.swift in Sources */,
