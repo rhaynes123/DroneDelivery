@@ -20,3 +20,6 @@ Update this file in the same commit as the change. One entry per release, groupe
 - SaveData + SaveStore: UserDefaults-backed Codable persistence with round-trip test.
 - Three Phase 1 missions (Missions.json) + airspace zones (Airspace.json).
 - MissionStore (@Observable): loads bundle, tracks unlocked/completed, persists via SaveStore.
+- RealityKit components (Kinematic, Battery, Altimeter, Wind, Cargo) + registration.
+- KinematicSystem with per-frame velocity smoothing, wind transfer, altitude, battery drain.
+- KinematicMath helpers with tests.
