@@ -1,0 +1,59 @@
+name: DroneDelivery
+
+options:
+  bundleIdPrefix: com.rhaynes123
+  deploymentTarget:
+    iOS: "18.0"
+  developmentLanguage: en
+  groupSortPosition: top
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: "0.1.0"
+
+targets:
+
+  DroneDelivery:
+    type: application
+    platform: iOS
+    sources:
+      - path: DroneDelivery
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ENABLE_PREVIEWS: YES
+
+  DroneDeliveryTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: DroneDeliveryTests
+    dependencies:
+      - target: DroneDelivery
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/DroneDelivery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DroneDelivery"
+
+schemes:
+  DroneDelivery:
+    build:
+      targets:
+        DroneDelivery: all
+        DroneDeliveryTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - DroneDeliveryTests

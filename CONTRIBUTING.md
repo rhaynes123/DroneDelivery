@@ -4,10 +4,11 @@ This is a personal learning project. Contributors = the user + Claude. Rules bel
 
 ## Project setup
 
-- **Xcode** 16 or later
+- **Xcode** 16 or later (point CLI at it once: `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`)
 - **iOS / iPadOS** 18+ deployment target
 - **Swift** 6 (strict concurrency on)
-- No package manager dependencies. Apple frameworks only unless the user explicitly approves an addition.
+- **XcodeGen** (`brew install xcodegen`) — generates `.xcodeproj` from `project.yml`. Run `xcodegen generate` after adding files on disk.
+- No runtime package manager dependencies. Apple frameworks only unless the user explicitly approves an addition. (XcodeGen is a dev tool, not a runtime dep.)
 
 Open `DroneDelivery.xcodeproj`, pick an iPhone/iPad simulator, run.
 

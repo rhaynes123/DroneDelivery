@@ -69,6 +69,18 @@ The ladder, in order — stop at the first rung that holds:
 - Physical realism knobs that need tuning — leave a calibration constant, not just a hard-coded number. Drones, wind, batteries are real things; minimal models can't see edge cases.
 - Non-trivial logic gets ONE runnable self-check (an `assert`-based `#Preview` or a tiny `#expect` test). No framework sprawl.
 
+## Xcode project workflow (XcodeGen)
+
+The `.xcodeproj` is generated from `project.yml` by [XcodeGen](https://github.com/yonaskolb/XcodeGen). Source of truth = `project.yml`. After adding any new source file or resource on disk, run:
+
+```bash
+xcodegen generate
+```
+
+If you don't, Xcode won't see the new file. Don't hand-edit `pbxproj`. If the project file feels wrong, fix `project.yml` and regenerate.
+
+Install: `brew install xcodegen`. The generated `.xcodeproj` is committed for simpler onboarding, but `project.yml` is what changes intentionally.
+
 ## Folder layout (don't deviate without reason)
 
 ```

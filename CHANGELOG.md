@@ -13,3 +13,5 @@ Update this file in the same commit as the change. One entry per release, groupe
 - `CHANGELOG.md` — this file.
 - Design doc at `docs/superpowers/specs/2026-06-26-drone-delivery-design.md`.
 - Phase 1 implementation plan at `docs/superpowers/plans/2026-06-27-phase1-core-loop.md` (14 tasks, TDD where the math allows).
+- `project.yml` + XcodeGen-generated `DroneDelivery.xcodeproj` (iOS 18, Swift 6 strict concurrency).
+- Placeholder `DroneDeliveryApp.swift` and `BootstrapTests.swift`.
