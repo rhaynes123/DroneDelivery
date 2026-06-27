@@ -28,3 +28,4 @@ Packages/
 # Logs / coverage
 *.log
 *.xcresult/
+.superpowers/
