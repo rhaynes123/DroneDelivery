@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FCB00B816C1BEA85F823BC /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDBED81127D3F3D8F6EB18 /* SaveData.swift */; };
 		080455F21B8D6741F596CB52 /* PhysicsTuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA224AB1DB5857C8C45FD845 /* PhysicsTuning.swift */; };
 		30F020764F13DA04FFB75980 /* BootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1E995950D909D15C6702 /* BootstrapTests.swift */; };
 		385ECE104933515F26B29C49 /* AirspaceTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */; };
+		5E11149A88C48E29BDE4231B /* SaveDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59DF6CFC185197921A12BE /* SaveDataTests.swift */; };
 		94419FE4CB73627E17B2EF2F /* DroneDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC885B6C2ADF98F7DDC938 /* DroneDeliveryApp.swift */; };
 		A04DDC77403E3A803E93509D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C7CB6B4A4657D165A0C4C /* Weather.swift */; };
 		A9DB80E5C4964BF6F4829688 /* AirspaceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BA8FBE05DF63E6847A316 /* AirspaceTypes.swift */; };
@@ -31,12 +33,14 @@
 		11AC885B6C2ADF98F7DDC938 /* DroneDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDeliveryApp.swift; sourceTree = "<group>"; };
 		1F30F0C4E3B9C099D171C248 /* DroneDeliveryTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DroneDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1E995950D909D15C6702 /* BootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapTests.swift; sourceTree = "<group>"; };
+		7C59DF6CFC185197921A12BE /* SaveDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataTests.swift; sourceTree = "<group>"; };
 		7E2C7CB6B4A4657D165A0C4C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		881DD35D4C6D58297BABD83C /* MissionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTypes.swift; sourceTree = "<group>"; };
 		A894A82A468D90DC6AB21383 /* DroneDelivery.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DroneDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirspaceTypesTests.swift; sourceTree = "<group>"; };
 		ACA4B601C9FA25A24B649777 /* GamePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePhase.swift; sourceTree = "<group>"; };
 		CB4BA8FBE05DF63E6847A316 /* AirspaceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirspaceTypes.swift; sourceTree = "<group>"; };
+		DCEDBED81127D3F3D8F6EB18 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		EA224AB1DB5857C8C45FD845 /* PhysicsTuning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTuning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +52,7 @@
 				A41FCED7CF1B653ACE769AFF /* App */,
 				2DB12F5406E45B28504211EA /* Flight */,
 				928C04FE566974D3B7BCC0BF /* Mission */,
+				6E7A6869ADAE74A50FFACB90 /* Persistence */,
 				3BC37F0485814954A2E76F31 /* Weather */,
 			);
 			path = DroneDelivery;
@@ -76,6 +81,14 @@
 				BF915C69AD13BE904FAACF71 /* DroneDeliveryTests */,
 				93992EE015310B6A59810D81 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		6E7A6869ADAE74A50FFACB90 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DCEDBED81127D3F3D8F6EB18 /* SaveData.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		928C04FE566974D3B7BCC0BF /* Mission */ = {
@@ -109,6 +122,7 @@
 			children = (
 				AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */,
 				6F8B1E995950D909D15C6702 /* BootstrapTests.swift */,
+				7C59DF6CFC185197921A12BE /* SaveDataTests.swift */,
 			);
 			path = DroneDeliveryTests;
 			sourceTree = "<group>";
@@ -197,6 +211,7 @@
 			files = (
 				385ECE104933515F26B29C49 /* AirspaceTypesTests.swift in Sources */,
 				30F020764F13DA04FFB75980 /* BootstrapTests.swift in Sources */,
+				5E11149A88C48E29BDE4231B /* SaveDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 				DB11AE2D720829DA1AADB0A5 /* GamePhase.swift in Sources */,
 				B8BD266B2C82B8D51B146872 /* MissionTypes.swift in Sources */,
 				080455F21B8D6741F596CB52 /* PhysicsTuning.swift in Sources */,
+				07FCB00B816C1BEA85F823BC /* SaveData.swift in Sources */,
 				A04DDC77403E3A803E93509D /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
