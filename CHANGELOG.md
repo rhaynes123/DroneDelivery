@@ -24,3 +24,4 @@ Update this file in the same commit as the change. One entry per release, groupe
 - KinematicSystem with per-frame velocity smoothing, wind transfer, altitude, battery drain.
 - KinematicMath helpers with tests.
 - AppState (@Observable): root state read by views, mirrored by KinematicSystem.
+- FlightInput (@Observable) + virtual Thumbstick SwiftUI view.
