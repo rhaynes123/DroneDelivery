@@ -20,93 +20,38 @@
 - Run `/simplify` (or `/code-review --fix`) on the diff before declaring any task done.
 - Update `CHANGELOG.md` (`## [Unreleased]`) in the same commit as any task change.
 - Cite the rule in code for any encoded regulation. Source: `REFERENCES.md`.
+- **After any file added or removed on disk, run `xcodegen generate` before `xcodebuild`.** Source of truth is `project.yml`; the `.xcodeproj` is a generated artifact.
+- Build/test verification command (subagents):
+  ```bash
+  xcodebuild -scheme DroneDelivery \
+    -destination 'platform=iOS Simulator,name=iPhone 15' \
+    build test
+  ```
+- Visual verification (Preview canvas, simulator gameplay) is the human's job, batched after UI-shipping tasks.
 
 ---
 
-## Task 1: Xcode project bootstrap
+## Task 1: Xcode project bootstrap — DONE (via XcodeGen)
 
-**Goal:** A clean Xcode project committed to git, with the empty domain folder structure ready.
+**Done in commit `13daa5f`.** Instead of the original Xcode wizard flow, the project is generated declaratively from `project.yml` using XcodeGen (`brew install xcodegen`). This lets subagents add files via Edit/Write and regenerate the `.xcodeproj` without driving the Xcode UI.
 
-**Files:**
-- Create: `DroneDelivery.xcodeproj/` (via Xcode wizard)
-- Create: `DroneDelivery/DroneDeliveryApp.swift` (Xcode generates; we trim)
-- Delete: `DroneDelivery/ContentView.swift` (Xcode generates a default we don't want)
-- Create: empty folder structure under `DroneDelivery/` matching the spec
-- Modify: `.gitignore` if Xcode adds anything not already covered
+**What was created:**
+- `project.yml` — source of truth (iOS 18, Swift 6 strict concurrency, app + unit test targets, iPhone + iPad device family).
+- `DroneDelivery.xcodeproj/` — generated, committed for simpler onboarding.
+- `DroneDelivery/App/DroneDeliveryApp.swift` — minimal `@main` placeholder.
+- `DroneDeliveryTests/BootstrapTests.swift` — placeholder Swift Testing suite.
 
-**Interfaces produced:** none yet — this task is scaffolding.
+**Workflow rule for the rest of this plan:** every task that adds a source file or resource must finish with `xcodegen generate` before `xcodebuild` runs — otherwise the new file isn't in the project graph.
 
-- [ ] **Step 1: Create the Xcode project**
-
-In Xcode: **File → New → Project → iOS → App**. Settings:
-
-| Field | Value |
-|---|---|
-| Product Name | `DroneDelivery` |
-| Team | your personal team |
-| Organization Identifier | `com.rhaynes123` (or your preference — used as bundle prefix) |
-| Interface | SwiftUI |
-| Language | Swift |
-| Include Tests | **Yes** |
-| Storage | None |
-
-Save into `/Users/richardhaynes/Developer/Projects/Swift/DroneDelivery/` — **uncheck "Create Git repository"** (we already have one).
-
-- [ ] **Step 2: Verify the project builds**
-
-In Xcode, press ⌘B. Expected: build succeeds, no errors.
-
-- [ ] **Step 3: Set deployment target to iOS 18 and Swift 6**
-
-Project → DroneDelivery target → General → Minimum Deployments → iOS 18.0.
-Project → DroneDelivery target → Build Settings → Swift Language Version → **Swift 6**.
-Project → DroneDelivery target → Build Settings → Strict Concurrency Checking → **Complete**.
-
-⌘B again to confirm still builds.
-
-- [ ] **Step 4: Delete the default ContentView, trim DroneDeliveryApp**
-
-Delete `DroneDelivery/ContentView.swift` (move to trash).
-
-Replace `DroneDelivery/DroneDeliveryApp.swift` with the minimal entry — RootView will come in Task 13, so for now use a placeholder:
-
-```swift
-import SwiftUI
-
-@main
-struct DroneDeliveryApp: App {
-    var body: some Scene {
-        WindowGroup {
-            Text("DroneDelivery")
-        }
-    }
-}
-```
-
-⌘B to confirm builds.
-
-- [ ] **Step 5: Create the empty domain folders**
-
-In Xcode's Project Navigator, right-click `DroneDelivery` → New Group (without folder). Create groups: `App`, `Scenes`, `Drone`, `Flight`, `Mission`, `Airspace`, `Weather`, `UI`, `Persistence`.
-
-Then **move `DroneDeliveryApp.swift` into `App/`**.
-
-- [ ] **Step 6: Run on simulator**
-
-⌘R, select an iPhone 15 simulator. Expected: simulator boots, shows "DroneDelivery" text on white background. Stop the run.
-
-- [ ] **Step 7: Update CHANGELOG and commit**
-
-Add to `CHANGELOG.md` under `## [Unreleased]` → `### Added`:
-
-```
-- Xcode project scaffold: iOS 18+, Swift 6 strict concurrency, empty domain folders.
-```
+**Verification command** (run by each later task instead of `⌘B` / `⌘U`):
 
 ```bash
-git add -A
-git commit -m "Bootstrap Xcode project (iOS 18, Swift 6 strict concurrency)"
+xcodebuild -scheme DroneDelivery \
+  -destination 'platform=iOS Simulator,name=iPhone 15' \
+  build test
 ```
+
+Requires `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer` once per machine.
 
 ---
 
