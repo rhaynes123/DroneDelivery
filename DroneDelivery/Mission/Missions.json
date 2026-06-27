@@ -1,0 +1,54 @@
+[
+  {
+    "id": "m01_calm_pizza",
+    "cargoTheme": "pizza",
+    "pickup": { "position": [-40, 0, -40], "label": "Tony's Pizza" },
+    "dropoff": { "position": [40, 0, 40], "label": "Maple St #14" },
+    "conditions": {
+      "weather": { "windKts": 0, "windDir": 0, "visibilitySM": 10, "ceilingFtAGL": 12000, "temperatureC": 22, "densityAltitudeFt": 800 },
+      "airspace": ["G_open"],
+      "notams": [],
+      "batteryWh": 80,
+      "timeOfDay": "day"
+    },
+    "unlockAfter": null
+  },
+  {
+    "id": "m02_crosswind_grocery",
+    "cargoTheme": "groceries",
+    "pickup": { "position": [-40, 0, 0], "label": "Marshall Grocery" },
+    "dropoff": { "position": [40, 0, -30], "label": "Elm St #22" },
+    "conditions": {
+      "weather": { "windKts": 12, "windDir": 270, "visibilitySM": 10, "ceilingFtAGL": 8000, "temperatureC": 18, "densityAltitudeFt": 1200 },
+      "airspace": ["G_open"],
+      "notams": [],
+      "batteryWh": 65,
+      "timeOfDay": "day"
+    },
+    "unlockAfter": "m01_calm_pizza"
+  },
+  {
+    "id": "m03_class_b_notam",
+    "cargoTheme": "video",
+    "pickup": { "position": [-40, 0, 40], "label": "News Bureau" },
+    "dropoff": { "position": [40, 0, -40], "label": "Stadium Cam Position" },
+    "conditions": {
+      "weather": { "windKts": 8, "windDir": 180, "visibilitySM": 6, "ceilingFtAGL": 4500, "temperatureC": 24, "densityAltitudeFt": 2200 },
+      "airspace": ["G_open", "B_authorized"],
+      "notams": [
+        {
+          "id": "NOTAM_STADIUM_EVENT",
+          "reason": "TFR — stadium event",
+          "polygon": [[-10, -10], [10, -10], [10, 10], [-10, 10]],
+          "floorAGL": 0,
+          "ceilingAGL": 400,
+          "start": "2026-06-27T00:00:00Z",
+          "end": "2099-12-31T00:00:00Z"
+        }
+      ],
+      "batteryWh": 70,
+      "timeOfDay": "day"
+    },
+    "unlockAfter": "m02_crosswind_grocery"
+  }
+]

@@ -18,3 +18,5 @@ Update this file in the same commit as the change. One entry per release, groupe
 - Domain model types: Mission, Conditions, Waypoint, WeatherSpec, AirspaceZone (with polygon containment), NOTAM, GamePhase.
 - PhysicsTuning constants (Flight/PhysicsTuning.swift) — all calibration knobs in one place.
 - SaveData + SaveStore: UserDefaults-backed Codable persistence with round-trip test.
+- Three Phase 1 missions (Missions.json) + airspace zones (Airspace.json).
+- MissionStore (@Observable): loads bundle, tracks unlocked/completed, persists via SaveStore.

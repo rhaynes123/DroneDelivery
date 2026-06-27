@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0119F92A4731CD3AF275BB74 /* MissionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5206C65DAF946400EBE00084 /* MissionStore.swift */; };
 		07FCB00B816C1BEA85F823BC /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEDBED81127D3F3D8F6EB18 /* SaveData.swift */; };
 		080455F21B8D6741F596CB52 /* PhysicsTuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA224AB1DB5857C8C45FD845 /* PhysicsTuning.swift */; };
+		1CCD982DDCC7D54AF0682445 /* MissionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D36DAD2BD924E72879E6D0C /* MissionStoreTests.swift */; };
 		30F020764F13DA04FFB75980 /* BootstrapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1E995950D909D15C6702 /* BootstrapTests.swift */; };
 		385ECE104933515F26B29C49 /* AirspaceTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */; };
 		5E11149A88C48E29BDE4231B /* SaveDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59DF6CFC185197921A12BE /* SaveDataTests.swift */; };
+		85494EFFB275DE5E57944CFC /* Missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C0B36C726C6AEFAF7418D41 /* Missions.json */; };
 		94419FE4CB73627E17B2EF2F /* DroneDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC885B6C2ADF98F7DDC938 /* DroneDeliveryApp.swift */; };
 		A04DDC77403E3A803E93509D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C7CB6B4A4657D165A0C4C /* Weather.swift */; };
 		A9DB80E5C4964BF6F4829688 /* AirspaceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BA8FBE05DF63E6847A316 /* AirspaceTypes.swift */; };
 		B8BD266B2C82B8D51B146872 /* MissionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881DD35D4C6D58297BABD83C /* MissionTypes.swift */; };
 		DB11AE2D720829DA1AADB0A5 /* GamePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA4B601C9FA25A24B649777 /* GamePhase.swift */; };
+		DF789B060CF3628C282B9F00 /* Airspace.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B9F7173FBF4A36DC8456E47 /* Airspace.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,11 @@
 
 /* Begin PBXFileReference section */
 		11AC885B6C2ADF98F7DDC938 /* DroneDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDeliveryApp.swift; sourceTree = "<group>"; };
+		1B9F7173FBF4A36DC8456E47 /* Airspace.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Airspace.json; sourceTree = "<group>"; };
 		1F30F0C4E3B9C099D171C248 /* DroneDeliveryTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DroneDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5206C65DAF946400EBE00084 /* MissionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStore.swift; sourceTree = "<group>"; };
+		5C0B36C726C6AEFAF7418D41 /* Missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Missions.json; sourceTree = "<group>"; };
+		5D36DAD2BD924E72879E6D0C /* MissionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStoreTests.swift; sourceTree = "<group>"; };
 		6F8B1E995950D909D15C6702 /* BootstrapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapTests.swift; sourceTree = "<group>"; };
 		7C59DF6CFC185197921A12BE /* SaveDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataTests.swift; sourceTree = "<group>"; };
 		7E2C7CB6B4A4657D165A0C4C /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 		928C04FE566974D3B7BCC0BF /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				5C0B36C726C6AEFAF7418D41 /* Missions.json */,
+				5206C65DAF946400EBE00084 /* MissionStore.swift */,
 				881DD35D4C6D58297BABD83C /* MissionTypes.swift */,
 			);
 			path = Mission;
@@ -122,6 +132,7 @@
 			children = (
 				AB5E8E9B3E3B5FF112826340 /* AirspaceTypesTests.swift */,
 				6F8B1E995950D909D15C6702 /* BootstrapTests.swift */,
+				5D36DAD2BD924E72879E6D0C /* MissionStoreTests.swift */,
 				7C59DF6CFC185197921A12BE /* SaveDataTests.swift */,
 			);
 			path = DroneDeliveryTests;
@@ -130,6 +141,7 @@
 		F156A63A1EBE489881A59528 /* Airspace */ = {
 			isa = PBXGroup;
 			children = (
+				1B9F7173FBF4A36DC8456E47 /* Airspace.json */,
 				CB4BA8FBE05DF63E6847A316 /* AirspaceTypes.swift */,
 			);
 			path = Airspace;
@@ -143,6 +155,7 @@
 			buildConfigurationList = EBBF8478531A80BFD4A5AF99 /* Build configuration list for PBXNativeTarget "DroneDelivery" */;
 			buildPhases = (
 				C3302FECE973784ACBA459C9 /* Sources */,
+				9263182D2A0DC30E84EAFC12 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +217,18 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		9263182D2A0DC30E84EAFC12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF789B060CF3628C282B9F00 /* Airspace.json in Resources */,
+				85494EFFB275DE5E57944CFC /* Missions.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9069E98E333EBDFBFA125505 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,6 +236,7 @@
 			files = (
 				385ECE104933515F26B29C49 /* AirspaceTypesTests.swift in Sources */,
 				30F020764F13DA04FFB75980 /* BootstrapTests.swift in Sources */,
+				1CCD982DDCC7D54AF0682445 /* MissionStoreTests.swift in Sources */,
 				5E11149A88C48E29BDE4231B /* SaveDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +248,7 @@
 				A9DB80E5C4964BF6F4829688 /* AirspaceTypes.swift in Sources */,
 				94419FE4CB73627E17B2EF2F /* DroneDeliveryApp.swift in Sources */,
 				DB11AE2D720829DA1AADB0A5 /* GamePhase.swift in Sources */,
+				0119F92A4731CD3AF275BB74 /* MissionStore.swift in Sources */,
 				B8BD266B2C82B8D51B146872 /* MissionTypes.swift in Sources */,
 				080455F21B8D6741F596CB52 /* PhysicsTuning.swift in Sources */,
 				07FCB00B816C1BEA85F823BC /* SaveData.swift in Sources */,

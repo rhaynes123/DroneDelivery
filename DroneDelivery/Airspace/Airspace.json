@@ -1,0 +1,20 @@
+[
+  {
+    "id": "G_open",
+    "polygonName": "City open ground",
+    "class": "g",
+    "polygon": [[-60, -60], [60, -60], [60, 60], [-60, 60]],
+    "floorAGL": 0,
+    "ceilingAGL": 400,
+    "requiresAuthorization": false
+  },
+  {
+    "id": "B_authorized",
+    "polygonName": "Class B sliver — authorization on file",
+    "class": "b",
+    "polygon": [[20, -60], [60, -60], [60, 60], [20, 60]],
+    "floorAGL": 0,
+    "ceilingAGL": 400,
+    "requiresAuthorization": true
+  }
+]
