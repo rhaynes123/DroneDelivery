@@ -5,7 +5,7 @@ import simd
 @Observable
 public final class FlightInput {
     public var leftStick: SIMD2<Float> = .zero    // x = strafe, y = forward
-    public var rightStick: SIMD2<Float> = .zero   // x = yaw, y = altitude
+    public var rightStick: SIMD2<Float> = .zero   // x = yaw, y = altitude  // ponytail: yaw deferred to Phase 2; right-stick.x reserved.
 
     public init() {}
 
