@@ -11,4 +11,5 @@ Update this file in the same commit as the change. One entry per release, groupe
 - `CONTRIBUTING.md` — setup, code style, phase discipline, self-review checklist.
 - `REFERENCES.md` — authoritative FAA / Part 107 sources to cite rather than invent.
 - `CHANGELOG.md` — this file.
-- Design doc at `docs/superpowers/specs/2026-06-26-drone-delivery-design.md` (in progress).
+- Design doc at `docs/superpowers/specs/2026-06-26-drone-delivery-design.md`.
+- Phase 1 implementation plan at `docs/superpowers/plans/2026-06-27-phase1-core-loop.md` (14 tasks, TDD where the math allows).
