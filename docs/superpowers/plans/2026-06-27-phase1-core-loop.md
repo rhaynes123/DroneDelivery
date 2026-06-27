@@ -24,7 +24,7 @@
 - Build/test verification command (subagents):
   ```bash
   xcodebuild -scheme DroneDelivery \
-    -destination 'platform=iOS Simulator,name=iPhone 15' \
+    -destination 'platform=iOS Simulator,name=iPhone 17' \
     build test
   ```
 - Visual verification (Preview canvas, simulator gameplay) is the human's job, batched after UI-shipping tasks.
@@ -47,7 +47,7 @@
 
 ```bash
 xcodebuild -scheme DroneDelivery \
-  -destination 'platform=iOS Simulator,name=iPhone 15' \
+  -destination 'platform=iOS Simulator,name=iPhone 17' \
   build test
 ```
 
@@ -1394,7 +1394,7 @@ private struct HarnessView: View {
 
 - [ ] **Step 3: Run on iPhone simulator**
 
-⌘R, iPhone 15 simulator. Expected:
+⌘R, iPhone 17 simulator. Expected:
 
 - A green field with four gray buildings renders.
 - Green and orange poles mark pickup/dropoff for `m01_calm_pizza`.
@@ -2059,7 +2059,7 @@ struct DroneDeliveryApp: App {
 
 - [ ] **Step 3: Run on simulator end-to-end**
 
-⌘R, iPhone 15 simulator. Walk the full loop:
+⌘R, iPhone 17 simulator. Walk the full loop:
 
 1. Main menu shows three missions. m02 and m03 are locked.
 2. Tap m01 → Briefing renders with sectional map (green G zone), no NOTAMs, weather card.
