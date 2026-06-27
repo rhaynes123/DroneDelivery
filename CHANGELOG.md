@@ -1,0 +1,14 @@
+# Changelog
+
+All notable changes to DroneDelivery. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); dates in `YYYY-MM-DD`.
+
+Update this file in the same commit as the change. One entry per release, grouped under: **Added**, **Changed**, **Deprecated**, **Removed**, **Fixed**, **Security**. Unreleased work lives under `## [Unreleased]`.
+
+## [Unreleased]
+
+### Added
+- `CLAUDE.md` — project guidance, locked design decisions, phasing rules, ponytail/simplify discipline.
+- `CONTRIBUTING.md` — setup, code style, phase discipline, self-review checklist.
+- `REFERENCES.md` — authoritative FAA / Part 107 sources to cite rather than invent.
+- `CHANGELOG.md` — this file.
+- Design doc at `docs/superpowers/specs/2026-06-26-drone-delivery-design.md` (in progress).

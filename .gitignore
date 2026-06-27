@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Xcode user-specific
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Build artifacts
+build/
+DerivedData/
+*.moved-aside
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Packages/
+
+# Reality Composer Pro caches
+*.realityComposerPro.cache/
+
+# Editor
+.idea/
+*.swp
+*~
+
+# Logs / coverage
+*.log
+*.xcresult/
