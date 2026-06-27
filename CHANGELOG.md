@@ -16,3 +16,4 @@ Update this file in the same commit as the change. One entry per release, groupe
 - `project.yml` + XcodeGen-generated `DroneDelivery.xcodeproj` (iOS 18, Swift 6 strict concurrency).
 - Placeholder `DroneDeliveryApp.swift` and `BootstrapTests.swift`.
 - Domain model types: Mission, Conditions, Waypoint, WeatherSpec, AirspaceZone (with polygon containment), NOTAM, GamePhase.
+- PhysicsTuning constants (Flight/PhysicsTuning.swift) — all calibration knobs in one place.
